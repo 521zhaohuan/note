@@ -6,7 +6,8 @@
 
 antd组件里边form表单的包裹写法正常为
 
-``` export default connect((state) => {
+``` 
+export default connect((state) => {
  return {
 
    data: state.registerAppoint,

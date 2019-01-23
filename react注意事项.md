@@ -20,7 +20,8 @@ export default connect((state) => {
 如果子组件向父组件通过<view ref={form => props.handleForm} />传值时出现错误可以换一种写法，将form.create包裹在外侧。
 
 esg:
-```  export default Form.create()(connect((state) => {
+```
+export default Form.create()(connect((state) => {
 
   return {
 

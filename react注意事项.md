@@ -6,41 +6,41 @@
 
 antd组件里边form表单的包裹写法正常为
 
-```js
+```
 export default connect((state) => {
 
 return {
 
-data: state.registerAppoint,
+   data: state.registerAppoint,
 
-cache: state.cache
+   cache: state.cache
 
   };
-
 })(Form.create()(RegisterAppoint));
 ```
 
 
 
+```j
 如果子组件向父组件通过`<view ref={form => props.handleForm} />`传值时出现错误可以换一种写法，将form.create包裹在外侧。
 
-esg:  
+```
+  esg：
 
-```js
+```
 export default Form.create()(connect((state) => {
 
-  return {
+return {
 
-     data: state.registerAppoint,
+   data: state.registerAppoint,
 
-     cache: state.cache
+   cache: state.cache
 
   };
-
 })(RegisterAppoint));
+
+
+
+
+
 ```
-
-
-
-
-
